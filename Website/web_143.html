@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1 style="color:navy;"><b>ECE 143</b></h1>
+  <h4 s><b>An Analysis of Goodreads Dataset</b></h4>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+
+  </div>
+
+  <div class="w3-third">
+    <img src="./images/photo2.png" style="width:98%; margin-left:10px; margin-right:15px;"><br><br><br>
+    <img src="./images/photo1.png" style="width:98%; margin-left:10px; margin-right:15px;">
+  </div>
+
+  <div class="w3-third">
+    <div class="container">
+      <br>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#menu1">Datasets and Preprocessing</a></li>
+        <li><a data-toggle="tab" href="#authors">Authors</a></li>
+        <li><a data-toggle="tab" href="#genres">Genres</a></li>
+        <li><a data-toggle="tab" href="#rate">Ratings</a></li>
+        <li><a data-toggle="tab" href="#prediction">Title-based Genre Prediction</a></li>
+        <li><a data-toggle="tab" href="#resouces">Resources</a></li>
+
+      </ul>
+
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <br>
+          <p></p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <br><br>
+          <img src="./images/info.png" alt=""  width=70%>
+        </div>
+        <div id="authors" class="tab-pane fade">
+          <br>
+          <img src="./images/best_authors.png" alt=""  width=40%>
+          <img src="./images/countries_gif.gif" alt=""  width=40%>
+          <br>
+          <img src="./images/ezgif.com-gif-maker.gif" alt="" width="40%">
+          <img src="./images/count_dist.png" alt="" width="40%">
+
+        </div>
+        <div id="genres" class="tab-pane fade">
+          <br>
+            <img src="./images/wc_genres.png" width="30%">
+            <img src="./images/genres_gif.gif" alt="" width="40%">
+            <br>
+            <br>
+            <img src="./images/gen_countries1.png" alt="" width="60%">
+            <br>
+            <img src="./images/gen_countries2.png" alt="" width="60%">
+        </div>
+        <br>
+        <div id="resouces" class="tab-pane fade">
+          <br>
+          <u>
+            <li>Kaggle Goodreads [<a href="https://www.kaggle.com/jealousleopard/goodreadsbooks">link</a>] (Dataset)</li>
+            <li>Kaggle Best of Goodreads [<a href="https://www.kaggle.com/meetnaren/goodreads-best-books">link</a>] (Dataset)</li>
+            <li>Goodreads Authors/books dataset: Kaggle (Dataset)</li>
+            <li>Authors dataset: GitHub [<a href="https://github.com/schoobani/goodreads-analysis/tree/master/Dataset">link</a>] (Dataset)</li>
+            <li>A Kaggle analysis notebook [<a href="https://www.kaggle.com/hoshi7/goodreads-analysis-and-recommending-books">link</a>]</li>
+            <li>Towards data science: book rating [<a href="https://towardsdatascience.com/do-books-with-more-reviews-get-better-ratings-f2f68b13fad8">link</a>]</li>
+            <li>Towards data science: All authors around us [<a href="https://towardsdatascience.com/all-the-authors-around-us-an-analytical-look-into-goodreads-authors-dataset-part-one-61697721e58e">link</a>]</li>
+          </u>
+        </div>
+        <div id="rate" class="tab-pane fade">
+          <img  width="40%" src="./images/rating_dist.png">
+          <img src="./images/rating.gif" width="40%">
+        </div>
+        <div id="prediction" class="tab-pane fade">
+          <img src="./images/prediction.png" width="40%">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:40px">
+  <a href="https://github.com/Fasgarinejad/ECE143_project"><i class="fa fa-github w3-hover-opacity"></i></a>
+</footer>
+
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else {
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+$('#pic-changer').change(function(){ //if the select value gets changed
+   var imageSource = $(this).find(':selected').data('picture'); //get the data from data-picture attribute
+   if(imageSource){ //if it has data
+      $('#image-location').html('<img src="./images/'+imageSource+'">'); // insert image in div image-location
+   } else {
+      $('#image-location').html(''); //remove content from div image-location, thus removing the image
+   }
+})
+</script>
+
+</body>
+</html>
